@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanced - Jamie</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="maintenance-message">
+            <p>¡El sitio web no está disponible actualmente! Por favor, regresa más tarde.</p>
+            <div id="countdown"></div>
+            <button id="theme-toggle-btn"></button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const targetDate = new Date('February 1, 2024 00:00:00').getTime();
+
+            const countdownInterval = setInterval(function () {
+                const currentDate = new Date().getTime();
+                const timeDifference = targetDate - currentDate;
+
+                if (timeDifference > 0) {
+                    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                    document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                } else {
+                    // El tiempo límite ha pasado, puedes redirigir o mostrar un mensaje diferente si lo deseas
+                    document.getElementById('countdown').innerHTML = '¡Bienvenido! El sitio está ahora disponible.';
+                    clearInterval(countdownInterval); // Detén el intervalo
+                }
+            }, 1000);
+        });
+    </script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
