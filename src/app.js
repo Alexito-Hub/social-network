@@ -13,7 +13,14 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(__dirname + '/public'));
 
+
+
+
 app.use('/', require('./routes/welcome'))
+app.use('/inicio', require('./router/inicio'))
+app.use('/login', require('./router/private/login'))
+app.use('/register', require('./router/private/register'))
+
 app.use('/panzonas/jamie', require('./routes/jamie'))
 app.use('/panzonas/luciana', require('./routes/luciana'))
 
