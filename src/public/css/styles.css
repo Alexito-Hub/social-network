@@ -18,19 +18,14 @@ html {
     overflow-x: hidden;
 }
 
-[data-theme='dark'] {
-    --bg-color: #292929;
-    --second-bg-color: #112e42;
-    --text-color: #ededed;
-    --main-color: #03d596;
-    --transparent: rgba(0, 0, 0, 0);
-}
+:root {
+    --color-native:#212121;
+    --text-color-native: #d1d1d1;
+    --text-color-native-black: #0f0f0f;
+    --main-color: #58D68D;
+    --color-white-native: #ffffff;
+    --color-black-native: #000000;
 
-[data-theme='light'] {
-    --bg-color: #FDFEFE;
-    --second-bg-color: #112e42;
-    --text-color: #292929;
-    --main-color: #03d596;
     --transparent: rgba(0, 0, 0, 0);
 }
 
@@ -40,8 +35,8 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background: var(--bg-color);
-    color: var(--text-color);
+    background: var(--color-native);
+    color: var(--text-color-native);
 }
 
 .background-container {
@@ -61,28 +56,38 @@ body {
     text-align: center;
     font-size: 2rem;
     font-weight: 500;
-    color: var(--text-color);
+    color: var(--color-white-native);
     margin-top: 2rem;
 }
 
+#color-text {
+    color: var(--main-color);
+}
+
 .maintenance-message {
+    padding: 10px;
     text-align: center;
-    color: #fff;
+    color: var(--text-color);
 }
 
 #countdown {
+    padding: 10px;
     font-size: 1.5rem;
     margin-top: 1rem;
 }
 
 .blog-post {
-    margin-bottom: 2rem;
-    border: 1px solid #ddd;
-    padding: 2rem;
+    margin-bottom: 5px;
+    border: 1px solid var(--color-black-native);
+    border-radius: 10px;
+    background-color: var(--color-black-native);
+    padding: 12px;
     text-align: center;
-    max-width: 300px;  /* Establece el ancho máximo */
+    max-width: 380px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    overflow: hidden;
 }
 
 .blog-content {
@@ -90,11 +95,16 @@ body {
 }
 
 .blog-content h2 {
-    color: #333;
+    color: var(--text-color-native);
 }
 
-.blog-date {
+.blog-date { 
     color: #777;
+}
+
+.text-p {
+    margin-top: 5px;
+    color: var(--text-color-native);
 }
 
 img {
@@ -103,19 +113,64 @@ img {
     border-radius: 5px;
 }
 
-.read-more-btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #4CAF50;
+
+
+
+
+.btnfos {
     color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    display: block;
+    font-size: 10px;
+    font-weight: 380;
+    line-height: 30px;
+    max-width: 100px;
+    margin: 0 auto 10px;
+    position: relative;
+    text-transform: uppercase;
+
+    width: 100%;
 }
 
-.read-more-btn:hover {
-    background-color: #45a049;
+
+
+.btnfos-1 {
+    margin-top: 10px;
+    font-weight: 100;
 }
+
+.btnfos-1 svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+}
+
+.btnfos-1 rect {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1;
+    stroke-dasharray: 215, 0;
+}
+
+.btnfos-1:hover {
+    background: rgba(225, 51, 45, 0);
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+
+.btnfos-1:hover rect {
+    stroke-width: 5;
+    stroke-dasharray: 10, 215;
+    stroke-dashoffset: 48;
+    -webkit-transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
+
+
 
 .container-button {
     text-align: center;
@@ -125,7 +180,7 @@ img {
 .button,
 .button-span {
     display: inline-block;
-    margin: 1rem;
+    margin: 5px;
     text-decoration: none;
 }
 
@@ -137,7 +192,7 @@ img {
     border: 2px solid var(--main-color);
     border-radius: 10px;
     background-color: var(--main-color);
-    color: var(--bg-color);
+    color: var(--color-white-native);
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -155,29 +210,17 @@ img {
     color: var(--main-color);
 }
 
-#theme-toggle-btn {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    padding: 1rem;
-    font-size: 0.8rem;
-    cursor: pointer;
-    background-color: var(--main-color);
-    color: var(--bg-color);
-    border: none;
-    border-radius: 15px;
-    outline: none;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-#theme-toggle-btn:hover {
-    background-color: var(--transparent);
-    color: var(--main-color);
-}
-
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 380px) {
+    .blog-content {
+        padding: 10px;
+    }
     .blog-post {
-        border: none;  /* Elimina el borde en pantallas más pequeñas */
+        height: auto;
+        width: 90%;
+        margin: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        position: relative;
     }
 }
 @media screen and (max-width: 600px) {

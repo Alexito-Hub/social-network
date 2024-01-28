@@ -9,13 +9,14 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="container">
-        <div class="maintenance-message">
-            <p>¡El sitio web no está disponible actualmente! Por favor, regresa más tarde.</p>
-            <div id="countdown"></div>
-            <button id="theme-toggle-btn"></button>
+    <main class="container-page">
+        <div class="container">
+            <div class="maintenance-message">
+                <p>¡El sitio web no está disponible actualmente! Por favor, regresa más tarde.</p>
+                <div id="countdown"></div>
+            </div>
         </div>
-    </div>
+    </main>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const targetDate = new Date('February 1, 2024 00:00:00').getTime();
