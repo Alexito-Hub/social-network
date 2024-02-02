@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:500&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--fontSizeBase);
 }
 
 html {
@@ -25,7 +27,6 @@ html {
     --main-color: #58D68D;
     --color-white-native: #ffffff;
     --color-black-native: #000000;
-
     --transparent: rgba(0, 0, 0, 0);
 }
 
@@ -38,6 +39,8 @@ body {
     background: var(--color-native);
     color: var(--text-color-native);
 }
+
+/* welcome -------------------------------- */
 
 .background-container {
     position: fixed;
@@ -52,6 +55,7 @@ body {
     z-index: -1;
 }
 
+
 .welcome-title {
     text-align: center;
     font-size: 2rem;
@@ -63,6 +67,8 @@ body {
 #color-text {
     color: var(--main-color);
 }
+
+/* contador -------------------------------- */
 
 .maintenance-message {
     padding: 10px;
@@ -76,6 +82,8 @@ body {
     margin-top: 1rem;
 }
 
+/* blog -------------------------------- */
+
 .blog-post {
     margin-bottom: 5px;
     border: 1px solid var(--color-black-native);
@@ -83,7 +91,7 @@ body {
     background-color: var(--color-black-native);
     padding: 12px;
     text-align: center;
-    max-width: 380px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -113,9 +121,7 @@ img {
     border-radius: 5px;
 }
 
-
-
-
+/* button -------------------------------- */
 
 .btnfos {
     color: #fff;
@@ -131,8 +137,6 @@ img {
 
     width: 100%;
 }
-
-
 
 .btnfos-1 {
     margin-top: 10px;
@@ -168,9 +172,7 @@ img {
     transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-
-
-
+/* button 2 -------------------------------- */
 
 .container-button {
     text-align: center;
@@ -178,7 +180,8 @@ img {
 }
 
 .button,
-.button-span {
+.button-span,
+.button-span span {
     display: inline-block;
     margin: 5px;
     text-decoration: none;
@@ -190,7 +193,7 @@ img {
     font-size: 1rem;
     font-weight: 500;
     border: 2px solid var(--main-color);
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: var(--main-color);
     color: var(--color-white-native);
     cursor: pointer;
@@ -204,13 +207,16 @@ img {
     color: var(--main-color);
 }
 
-.button button:hover,
+.button button:hover {
+  background-color: var(--transparent);
+  color: var(--main-color);
+}
 .button-span span:hover {
-    background-color: var(--transparent);
-    color: var(--main-color);
+  background-color: var(--transparent);
+  color: var(--color-white-native);
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 500px) {
     .blog-content {
         padding: 10px;
     }
@@ -230,3 +236,301 @@ img {
         margin-top: 1rem;
     }
 }
+
+
+/* checkbox -------------------------------- */
+
+/* login -------------------------------- */
+
+
+
+.align {
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    place-items: center;
+  }
+  
+  .grid {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 20rem;
+  }
+  
+  .hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  :root {
+    --iconFill: var(--main-color);
+  }
+  
+  .icons {
+    display: none;
+  }
+  
+  .icon {
+    height: 1em;
+    display: inline-block;
+    fill: #606468;
+    fill: var(--iconFill);
+    width: 1em;
+    vertical-align: middle;
+  }
+  
+  :root {
+    --htmlFontSize: 100%;
+  
+    --bodyBackgroundColor: var(--color-native);
+    --bodyColor: var(--main-color);
+    --bodyFontFamily: "Open Sans";
+    --bodyFontFamilyFallback: sans-serif;
+    --bodyFontSize: 0.875rem;
+    --bodyFontWeight: 400;
+    --bodyLineHeight: 1.5;
+  }
+  
+  * {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+  }
+  
+
+  .align {
+    background-color: #2c3338;
+    background-color: var(--bodyBackgroundColor);
+    color: #606468;
+    color: var(--main-color);
+    font-family: "Open Sans", sans-serif;
+    font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
+    font-size: 0.875rem;
+    font-size: var(--bodyFontSize);
+    font-weight: 400;
+    font-weight: var(--bodyFontWeight);
+    line-height: 1.5;
+    line-height: var(--bodyLineHeight);
+    margin: 0;
+    min-height: 100vh;
+  }
+  
+  :root {
+    --anchorColor: #eee;
+  }
+  
+  a {
+    color: #eee;
+    color: var(--anchorColor);
+    outline: 0;
+    text-decoration: none;
+  }
+  
+  a:focus,
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  :root {
+    --formGap: 0.875rem;
+  }
+  
+  input {
+    background-image: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+  }
+  
+  input[type="submit"] {
+    cursor: pointer;
+  }
+  
+  .form {
+    display: grid;
+    grid-gap: 0.875rem;
+    gap: 0.875rem;
+    grid-gap: var(--formGap);
+    gap: var(--formGap);
+  }
+  
+  .form input[type="email"],
+  .form input[type="password"],
+  .form input[type="text"],
+  .form input[type="submit"] {
+    margin: auto;
+    align-items: center;
+    width: 50%;
+  }
+  
+  .form__field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .form__input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  
+  :root {
+    --loginBorderRadus: 15px;
+    --loginColor: #eee;
+  
+    --loginInputBackgroundColor: #3b4148;
+    --loginInputHoverBackgroundColor: #434a52;
+  
+    --loginLabelBackgroundColor: #363b41;
+  
+    --loginSubmitBackgroundColor: #ea4c88;
+    --loginSubmitColor: #eee;
+    --loginSubmitHoverBackgroundColor: #d44179;
+  }
+  
+  .register,
+  .login {
+    color: #eee;
+    color: var(--loginColor);
+  }
+  
+  .register label,
+  .login label,
+  .register input[type="email"],
+  .register input[type="text"],
+  .register input[type="password"],
+  .register input[type="submit"],
+  .login input[type="text"],
+  .login input[type="password"],
+  .login input[type="submit"] {
+    border-radius: 20px;
+    border-radius: var(--loginBorderRadus);
+    padding: 10px;
+  }
+   
+  .register label,
+  .login label {
+    background-color: #363b41;
+    background-color: var(--loginLabelBackgroundColor);
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .register input[type="email"],
+  .register input[type="text"],
+  .register input[type="password"],
+  .login input[type="password"],
+  .login input[type="text"] {
+    background-color: #3b4148;
+    background-color: var(--loginInputBackgroundColor);
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+  
+  .register input[type="email"]:focus,
+  .register input[type="email"]:hover,
+  .register input[type="text"]:focus,
+  .register input[type="text"]:hover,
+  .register input[type="password"]:focus,
+  .register input[type="password"]:hover,
+  .login input[type="password"]:focus,
+  .login input[type="password"]:hover,
+  .login input[type="text"]:focus,
+  .login input[type="text"]:hover {
+    background-color: #434a52;
+    background-color: var(--loginInputHoverBackgroundColor);
+  }
+  
+  .register input[type="submit"],
+  .login input[type="submit"] {
+    background-color: #ea4c88;
+    background-color: var(--loginSubmitBackgroundColor);
+    color: #eee;
+    color: var(--loginSubmitColor);
+    margin-top: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .register input[type="submit"]:focus,
+  .register input[type="submit"]:hover,
+  .login input[type="submit"]:focus,
+  .login input[type="submit"]:hover {
+    background-color: #d44179;
+    background-color: var(--loginSubmitHoverBackgroundColor);
+  }
+
+  p {
+    margin-top: 5px;
+    margin-bottom: 1.5rem;
+  }
+  
+.text--center {
+  text-align: center;
+
+}
+
+.terms a,
+.text--center a {
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.terms {
+  color: var(--main-color);
+  margin: auto;
+  text-align: center;
+  font-size: 7px;
+}
+
+.forget {
+  color: var(--color-white-native);
+  margin: auto;
+  text-align: center;
+  font-size: 7px;
+}
+
+.terms a:hover,
+.text--center a:hover,
+.forget:hover,
+.forget a:hover {
+    color: var(--color-white-native);
+}
+
+.forget a {
+  color: var(--main-color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+.title-title {
+  margin: auto;
+  text-align: center;
+  font-size: 22px;
+  color: var(--color-white-native);
+  margin-bottom: 12px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+ /* Support --------------------------- */
