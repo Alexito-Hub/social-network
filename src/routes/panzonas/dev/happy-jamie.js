@@ -2,7 +2,7 @@ const { Router } = require('express')
 const router = new Router()
 
 router.get('/', (req, res) => {
-  res.render('panzonas/dev/comments-jijiji')
+  res.render('panzonas/dev/happy-jamie')
 })
 
 module.exports = router;

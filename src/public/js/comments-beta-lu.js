@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         // Enviar solicitud POST al servidor
-        fetch('http://localhost:4000/comments/lu', {
+        fetch('https://api-vanced.replit.app/comments/lu', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -51,7 +51,7 @@ function showMessage(message, type) {
 }
 
 function getComments() {
-    fetch('http://localhost:4000/comments/lu')
+    fetch('https://api-vanced.replit.app/comments/lu')
         .then(response => response.json())
         .then(data => {
             const comments = data.comments || []; // Obtener la lista de comentarios o un array vacío si no hay comentarios
@@ -126,7 +126,7 @@ function submitComment() {
     formData.append('name', name);
     formData.append('comment', comment);
 
-    fetch('http://localhost:4000/comments/lu', {
+    fetch('https://api-vanced.replit.app/comments/lu', {
         method: 'POST',
         body: formData
     })
