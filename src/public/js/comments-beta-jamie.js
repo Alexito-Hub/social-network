@@ -66,7 +66,7 @@ function getComments() {
                 });
             } else {
                 // Si no hay comentarios, mostrar un mensaje indicando que no hay comentarios disponibles
-                commentsContainer.innerHTML = '<p class="no-comments-message">Sé el primero en comentar, deja tu opinión aquí abajo</p>';
+                commentsContainer.innerHTML = '<p class="no-comments-message">Sé el primero en comentar, deja tu comentario aquí abajo</p>';
             }
         })
         .catch(error => {

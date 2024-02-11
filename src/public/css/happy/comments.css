@@ -171,8 +171,10 @@ body {
 }
 
 .form-content .message {
+    display: block;
     margin: auto;
     margin-top: 10px;
+    align-items: center;
     text-align: center;
     font-size: 12px;
     color: rgb(209, 209, 209);
