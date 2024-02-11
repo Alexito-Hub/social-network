@@ -1,0 +1,193 @@
+
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: auto;
+}
+
+.container-msg {
+    align-items: center;
+    margin: auto;
+    padding: 25px;
+    position: relative;
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/221808/sky.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(60%);
+    z-index: -1;
+}
+
+
+.container-msg .title {
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 22px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-msg .content-text {
+    margin: auto;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: rgb(209, 209, 209);
+}
+
+.container-msg .no-comments-message {
+    text-align: center;
+    font-size: 14px;
+}
+
+.comments-container {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+
+.comment {
+    max-width: 400px;
+    margin: auto;
+    align-items: center;
+    display: block;
+    border: 1px solid #555;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment .info-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #Fff;
+    font-size: 12px;
+    color: #ffffff;
+    
+}
+
+.comment .comment-text {
+    margin: auto;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(209, 209, 209);
+}
+
+.form-container {
+    margin: auto;
+    align-items: center;
+    max-width: 500px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.form-container .title-form {
+    text-align: center;
+}
+
+.form-container .form-content {
+    display: block;
+    margin: auto;
+}
+
+.form-container .form-content p {
+    margin: auto;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+}
+
+.form-container .form-content textarea,
+.form-container .form-content input {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 1px;
+    width: 180px;
+    height: 16px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #Fff;
+    background-color: #333;
+    font-size: 12px;
+    outline: none;
+    transition: background-color 0.9s, color 0.9s, border 0.9s;
+}
+
+.form-container .form-content textarea:hover,
+.form-container .form-content input:hover {
+    background-color: #555;
+    border: 1px solid #4CAF50;
+}
+
+.form-container .no-account {
+    margin: auto;
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 15px;
+    color: rgb(209, 209, 209);
+}
+
+.form-container button {
+    text-align: center;
+}
+
+.form-container button {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.form-container button {
+    margin: auto;
+    display: block;
+    align-items: center;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 2px solid #333;
+    border-radius: 20px;
+    background-color: #c90956;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.form-container button:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: #ffffff;
+}
+
+.form-content .message {
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(209, 209, 209);
+    padding: 1px;
+    border-radius: 20px;
+    width: 400px;
+    height: 14px;
+}
+
+.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.error {
+    background-color: #f44336;
+    color: white;
+}

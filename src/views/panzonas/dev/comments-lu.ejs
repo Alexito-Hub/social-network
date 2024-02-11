@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanced - Comentarios</title>
+    <link rel="stylesheet" href="/css/happy/comments.css">
+</head>
+<body>
+    
+    <div class="container-msg">
+        <h1 class="title">¡Desea un Feliz Cumpleaños!</h1>
+        <p class="content-text">Estamos emocionados por iniciar un nuevo cumpleaños, por ello dedícale unos mensajes que se quedarán grabados en Vanced.</p>
+
+        <div class="comments-container" id="commentsContainer">
+            <!-- Los comentarios se insertarán aquí dinámicamente -->
+        </div>
+
+        <div class="form-container">
+            <p class="title-form">Envía un comentario</p>
+            <form id="commentForm" class="my-form" action="" method="post">
+                <div class="form-content">
+                    <p class="text-form">Nombre</p>
+                    <input type="text" name="name" id="name" class="input-form" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="form-content">
+                    <p class="text-form">Comentario</p>
+                    <textarea name="comment" id="comment" class="textarea-form" placeholder="Ingresa un comentario" required></textarea>
+                    <div id="messageContainer"></div>
+                </div>
+                <p class="no-account">Esta web, apartada de Vanced, no está asociada con las cuentas de Vanced.</p>
+                <button type="submit" id="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="background-container">
+        </div>
+    </div>
+    <script src="/js/comments-beta.js"></script>
+</body>
+</html>

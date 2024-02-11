@@ -2,45 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanced - Jamie</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/happy/blog.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <main class="container-page">
-        <div class="container">
-            <div class="maintenance-message">
-                <p>¡El sitio web no está disponible actualmente! Por favor, regresa más tarde.</p>
-                <div id="countdown"></div>
-            </div>
+    <div class="header-content-box">
+        <div class="secondline">
+            Feliz cumpleaños,
+            <span class="txt-rotate color" data-period="1200" data-rotate='[ " Jamie!" ]'></span>
+            <span class="slash">|</span>
         </div>
-    </main>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const targetDate = new Date('February 1, 2024 00:00:00').getTime();
-
-            const countdownInterval = setInterval(function () {
-                const currentDate = new Date().getTime();
-                const timeDifference = targetDate - currentDate;
-
-                if (timeDifference > 0) {
-                    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
-                    document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-                } else {
-                    // El tiempo límite ha pasado, puedes redirigir o mostrar un mensaje diferente si lo deseas
-                    document.getElementById('countdown').innerHTML = 'Muy pronto disponible';
-                    clearInterval(countdownInterval); // Detén el intervalo
-                }
-            }, 1000);
-        });
-    </script>
+    </div>
+    <article class="blog-post">
+        <img src="/media/happyj.jpg" alt="Imagen del blog">
+        <div class="blog-content">
+            <h2>Happy <span class="color-text color">Birthday</span></h2>
+            <p class="blog-date">Fecha: 14 de Enero, 2024</p>
+            <p class="text-p">¡Feliz cumpleaños, Jamie! Hoy celebras un año más de vida y queremos dedicarte una sorpresa especial. Ya sabes de qué se trata, <span id="contador"></span> Te pedimos que esperes hasta ese momento para darle clic al botón y descubrir la sorpresa preparada para ti. Mientras tanto, <a class="texting-comments" href="comments">te invitamos a leer los mensajes que te dedicaron.</a> ¡Disfruta de este día tan especial y que todos tus deseos se hagan realidad!</p>
+            <a class="btnfos btnfos-1" href="#">
+                <svg>
+                    <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+                </svg>
+                Continuar
+            </a>
+        </div>
+    </article>
+    <div class="text-comments-blog">
+        <a href="comments">Comentarios</a>
+    </div>
     <script src="/js/script.js"></script>
 </body>
-
 </html>

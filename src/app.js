@@ -4,7 +4,7 @@ const path = require("path");
 
 const app = express();
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3001);
 
 app.use(morgan('dev'));
 
@@ -23,8 +23,10 @@ app.use('/register', require('./routes/private/register'))
 
 app.use('/panzonas/jamie', require('./routes/panzonas/jamie'))
 app.use('/panzonas/jamie/happy', require('./routes/panzonas/dev/happy-jijiji'))
+app.use('/panzonas/jamie/comments', require('./routes/panzonas/dev/comments-jijiji'))
 app.use('/panzonas/luciana', require('./routes/panzonas/luciana'))
 app.use('/panzonas/luciana/happy', require('./routes/panzonas/dev/happy-lu'))
+app.use('/panzonas/luciana/comments', require('./routes/panzonas/dev/comments-lu'))
 
 app.use((req, res) => {
     res.status(404).send('Página no encontrada');
