@@ -1,0 +1,246 @@
+/* styles.css */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+/* Estilos para Modo Claro */
+.modo-claro {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Estilos para Modo Oscuro */
+.modo-oscuro {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Estilos para Modo Rosado */
+.modo-rosado {
+    background-color: #ff69b4;
+    color: #fff;
+}
+
+/* Estilos para Modo Morado */
+.modo-morado {
+    background-color: #800080;
+    color: #fff;
+}
+
+/* Estilos para Modo Rosado Pastel */
+.modo-rosado-pastel {
+    background-color: #ffd1dc;
+    color: #000;
+}
+
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .image.active {
+    opacity: 1;
+  }
+  .image.inactive {
+    opacity: 0;
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    max-width: 400px;
+    left: 0; /* Ajustar para mover el contenido al lado izquierdo */
+    transform: translateY(-50%);
+    text-align: left; /* Ajustar para alinear el contenido a la izquierda */
+    color: white;
+    padding-left: 20px; /* Ajustar para dar espacio desde el borde izquierdo */
+  }
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+
+  }
+
+  .text {
+    font-size: 12px;
+
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 20px;
+    transition: background-color 0.9s, color 0.9s, border 0.9s;
+    cursor: pointer;
+
+  }
+  .button:hover {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #ffd1dc;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 20px;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.609); /* Opacidad negra del 20% */
+  }
+  
+
+  section {
+    display: none;
+  }
+
+.visible {
+    display: block;
+}
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+
+body {
+    margin: auto;
+    display: block;
+    color: #ccc;
+    background-color: #333;
+    
+}
+
+.comments {
+    text-align: center;
+    max-width: 500px;
+    align-items: center;
+    margin: auto;
+    overflow: hidden;
+}
+.comments .title-comment {
+    margin: 0;
+    text-align: center;
+    margin-top: 80px;
+    margin-left: 0;
+}
+
+.comments .text-comment {
+    margin: 0;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.comment {
+    max-width: 300px;
+    margin: auto;
+    font-size: 12px;
+    display: block;
+    border: 1px solid #555;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.dev-to {
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+ .button-comments {
+    margin-bottom: 40px;
+ }
+
+#over{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+}
+.birthday-dialog {
+    background-color: #333;
+    box-shadow: 0 4px 8px #ffd1dc;
+    color: #ccc;
+    border-radius: 20px;
+}
+
+
+.lu {
+    margin: 0;
+    margin-top: 90px;
+    text-align: center;
+}
+ .lu h2 {
+    font-size: 18px;
+ }
+
+ .lu img {
+    width: 100px;
+    height: 100px;
+ } 
+
+ .lu p {
+    font-size: 10px;
+ }

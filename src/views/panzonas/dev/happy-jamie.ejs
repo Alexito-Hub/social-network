@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imágenes Rotativas con Texto y Botón</title>
+<link rel="stylesheet" href="/css/happy-jamie/styles.css">
+</head>
+<body>
+
+    <main>
+        <section id="seccion1 container" class="seccion visible">
+              <img class="image active" src="/happy-jamie/1.jpg" alt="Imagen 1">
+              <img class="image inactive" src="/happy-jamie/2.jpg" alt="Imagen 2">
+              <img class="image inactive" src="/happy-jamie/3.jpg" alt="Imagen 3">
+              <img class="image inactive" src="/happy-jamie/4.jpg" alt="Imagen 4">
+              <div class="overlay"></div>
+              <div class="text-overlay">
+                <div class="title">¡Feliz cumpleaños, Jamie!</div>
+                <p class="text">En este día especial, queremos abrir este espacio para que puedas revivir los bellos mensajes y momentos que compartiste con tus amigos. Aunque seamos pocos, estamos aquí con mucho cariño para celebrarte.</p>
+                <a class="button continuar" onclick="openBirthdayDialog()">Empieza el recorrido</a>
+            </div>
+        </section>
+        
+        
+        <section id="seccion2" class="seccion comments">
+            <div class="over overlay" id="over" onclick="closeBirthdayDialog()"></div>
+            <h2 class="title-comment">¡Vaya, estás creciendo rápidamente!</h2>
+
+            <p class="text-comment">¡Mira estos hermosos mensajes que tus amigos han enviado! ¡Qué emoción!</p>
+            <div class="comments-container" id="comments-container"></div>
+            <div class="birthday-dialog dialog" id="birthday-dialog">
+                <h2>Feliz Cumpleaños!</h2>
+                <p>¡Esperamos que tengas un día maravilloso!</p>
+                <a class="button" onclick="closeBirthdayDialog()">Cerrar</a>
+            </div>
+
+            <p class="dev-to">El desarrollador tardó un poco en crear esta página web, pero pronto habrá más cambios.</p>
+            <a class="button continuar button-comments" onclick="openBirthdayDialog()">Haz clic aquí para continuar.</a>
+        </section>
+      
+
+        <section id="seccion3" class="seccion lu">
+            <div class="content">
+              <h2>Oh rayos, parece que hubo un problema dentro del servidor</h2>
+              <img src="/media/error.png" alt="Error">
+                <p>Na, no te creas, aún estamos agregando más cosas.</p>            </div>
+          </section>
+
+          
+
+    </main>
+<script src="/js/script.js"></script>
+<script>
+
+</script>
+
+</body>
+</html>
